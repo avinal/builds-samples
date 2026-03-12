@@ -27,6 +27,7 @@ func main() {
 	}
 
 	srv := &http.Server{Addr: fmt.Sprintf(":%d", port)}
+	log.Printf("starting server on port %d", port)
 	go func() {
 		http.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
 			fmt.Fprintf(w, "Hello, World! I am using %s by the way.", runtime.Version())

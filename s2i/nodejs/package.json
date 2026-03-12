@@ -2,7 +2,10 @@
   "name": "nodejs-sample-app",
   "description": "NodeJS sample app",
   "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js"
+  },
   "engines": {
-      "node": "~18"
+    "node": ">=22"
   }
 }

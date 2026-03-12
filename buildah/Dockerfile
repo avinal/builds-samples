@@ -1,8 +1,8 @@
-# Referenced from From https://github.com/shipwrigh-io/sample-go
+# Reference: https://github.com/shipwright-io/sample-go
 
-FROM registry.access.redhat.com/ubi9/go-toolset:1.21 AS build
+FROM registry.access.redhat.com/ubi9/go-toolset:latest AS build
 
-COPY main.go .
+COPY go.mod main.go .
 ENV CGO_ENABLED=0
 RUN go build \
     -ldflags "-s -w -extldflags '-static'" \
